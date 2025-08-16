@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Venta de Artículos de Pesca</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>🎣 Venta de Artículos de Pesca</h1>
+    <p>Gestión de inventario</p>
+  </header>
+
+  <main>
+    <section class="formulario">
+      <h2>Agregar Nuevo Artículo</h2>
+      <form id="formArticulo">
+        <input type="text" id="nombre" placeholder="Nombre del Artículo" required>
+        <input type="text" id="categoria" placeholder="Categoría" required>
+        <input type="number" id="precio" placeholder="Precio ($)" required>
+        <input type="number" id="stock" placeholder="Stock" required>
+        <input type="text" id="proveedor" placeholder="Proveedor" required>
+        <button type="submit">Agregar</button>
+      </form>
+    </section>
+
+    <section class="tabla">
+      <h2>Lista de Artículos</h2>
+      <table id="tablaArticulos">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Precio ($)</th>
+            <th>Stock</th>
+            <th>Proveedor</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- ACA VAN LOS ARTICULOS AGREGADOS -->
+        </tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tienda Pesquera | Pesca más que un hobby, una pasión.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
