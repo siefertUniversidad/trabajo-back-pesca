@@ -11,6 +11,16 @@ header {
   text-align: center;
   padding: 20px;
 }
+.header-contenido {
+  display: flex;
+  align-items: center;   
+  justify-content: center; 
+  gap: 10px; 
+}
+.logo {
+  width: 60px;  
+  height: auto; 
+}
 main {
   flex: 1;
   padding: 20px;
@@ -72,3 +82,13 @@ thead {
   background: #66b3ff;
   color: white;
 }
+.boton-comprar {
+  text-align: center;       /* el botón no estaba centrado y no me gustaba */
+  margin: 40px 0 60px 0;
+}
+
+.boton-comprar .btn {
+  font-size: 1.1em;         
+  padding: 12px 25px;
+}
+
