@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Compra - Tienda de Pesca</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <h1>🛒 Realizar Compra</h1>
+  </header>
+
+  <main>
+    <section>
+      <h2>Productos Disponibles</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Precio</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Caña de Pescar</td><td>25000</td></tr>
+          <tr><td>Carrete Shimano</td><td>40000</td></tr>
+          <tr><td>Señuelo Rapala</td><td>8000</td></tr>
+          <!-- repetir codigo en caso de que en la pag de productos pongan más -->
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h2>Agregar al Carrito</h2>
+      <form id="formCarrito">
+        <input type="text" id="producto" placeholder="Producto" required>
+        <input type="number" id="cantidad" placeholder="Cantidad" required>
+        <input type="number" id="precio" placeholder="Precio unitario" required>
+        <button type="submit">Agregar</button>
+      </form>
+
+      <table id="tablaCarrito">
+        <thead>
+          <tr>
+            <th>Producto</th>
+            <th>Cantidad</th>
+            <th>Precio Final</th>
+          </tr>
+        </thead>
+        <tbody>
+          <!-- acá van los datos registrados -->
+        </tbody>
+      </table>
+
+      <button id="continuarCompra" class="btn">Continuar con la Compra</button>
+    </section>
+
+    <!-- Ojo 2. -->
+    <section id="formCliente" style="display:none; margin-top:20px;">
+      <h2>Datos del Cliente</h2>
+      <form id="formFinal">
+        <input type="text" id="nombreCliente" placeholder="Nombre" required>
+        <input type="text" id="rutCliente" placeholder="RUT" required>
+        <input type="text" id="contactoCliente" placeholder="Teléfono" required>
+        <input type="text" id="direccionCliente" placeholder="Dirección" required>
+        <button type="submit">Finalizar Compra</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Tienda Pesquera</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

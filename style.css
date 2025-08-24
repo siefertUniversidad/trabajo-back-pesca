@@ -1,68 +1,66 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0;
-  background-color: #ffffff;
-}
-
-html,
-body {
-  height: 100%;
-  margin: 0;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
 }
-
-main {
-  flex: 1;
-  padding: 20px;
-  overflow-y: auto;
-}
-
 header {
-  background-color: #003366;
+  background: #003366;
   color: white;
   text-align: center;
   padding: 20px;
 }
-
-.formulario {
-  margin: 20px;
-  padding: 15px;
-  background: #f4f4f4;
-  border-radius: 8px;
+main {
+  flex: 1;
+  padding: 20px;
 }
-.formulario h2 {
-  margin-bottom: 10px;
-}
-.formulario input {
-  display: block;
-  width: 100%;
-  margin: 8px 0;
-  padding: 8px;
-}
-.formulario button {
-  background: #66b3ff;
-  border: none;
-  padding: 10px;
+footer {
+  background: #003366;
   color: white;
-  cursor: pointer;
-  width: 100%;
-  border-radius: 5px;
+  text-align: center;
+  padding: 15px;
 }
-.formulario button:hover {
+.btn {
+  display: inline-block;
+  background: #66b3ff;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 6px;
+}
+.btn:hover {
   background: #0055aa;
 }
-
-.tabla {
-  margin: 20px;
+.menu {
+  text-align: center;
+  margin-top: 20px;
+}
+.exito {
+  background: #d4edda;
+  color: #155724;
+  padding: 10px;
+  text-align: center;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+}
+.card {
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 6px;
+  text-align: center;
+}
+.card img {
+  width: 100%;
+  border-radius: 6px;
 }
 table {
   width: 100%;
   border-collapse: collapse;
-}
-thead {
-  background-color: #66b3ff;
-  color: white;
+  margin-top: 10px;
 }
 th,
 td {
@@ -70,15 +68,7 @@ td {
   padding: 8px;
   text-align: center;
 }
-tbody tr:nth-child(even) {
-  background-color: #f9f9f9;
-}
-
-footer {
-  background-color: #003366;
+thead {
+  background: #66b3ff;
   color: white;
-  text-align: center;
-  padding: 15px;
-  position: sticky;
-  bottom: 0;
 }

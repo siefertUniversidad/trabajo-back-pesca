@@ -2,53 +2,33 @@
 <html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>Venta de Artículos de Pesca</title>
+  <title>Tienda de Pesca</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
   <header>
-    <h1>🎣 Venta de Artículos de Pesca</h1>
-    <p>Gestión de inventario</p>
+    <h1>🎣 Tienda de Pesca</h1>
+    <p>Bienvenido a nuestra tienda online</p>
   </header>
 
-  <main>
-    <section class="formulario">
-      <h2>Agregar Nuevo Artículo</h2>
-      <form id="formArticulo">
-        <input type="text" id="nombre" placeholder="Nombre del Artículo" required>
-        <input type="text" id="categoria" placeholder="Categoría" required>
-        <input type="number" id="precio" placeholder="Precio ($CLP)" required>
-        <input type="number" id="stock" placeholder="Cantidad" required>
-        <input type="text" id="proveedor" placeholder="Cliente" required>
-        <button type="submit">Agregar</button>
-      </form>
-    </section>
+  <!-- Ojo 1 -->
+  <div id="mensajeExito" class="exito" style="display:none;">
+    <p>✅ ¡Tu compra fue un éxito!</p>
+  </div>
 
-    <section class="tabla">
-      <h2>Lista de Artículos</h2>
-      <table id="tablaArticulos">
-        <thead>
-          <tr>
-            <th>ID</th>
-            <th>Nombre</th>
-            <th>Categoría</th>
-            <th>Precio ($CLP)</th>
-            <th>Cantidad</th>
-            <th>Cliente</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- ACA VAN LOS ARTICULOS AGREGADOS -->
-        </tbody>
-      </table>
-    </section>
+  <main>
+    <h2>Menú Principal</h2>
+    <div class="menu">
+      <a href="productos.html" class="btn">Ver Productos</a>
+      <a href="compra.html" class="btn">Ir a Comprar</a>
+    </div>
   </main>
 
   <footer>
-    <p>&copy; 2025 Tienda Pesquera | Pesca más que un hobby, una pasión.</p>
+    <p>&copy; 2025 Tienda Pesquera</p>
   </footer>
 
   <script src="script.js"></script>
 </body>
-
 </html>

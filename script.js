@@ -1,26 +1,42 @@
-let contadorID = 1;
+// Ojo 1.
+if (window.location.href.includes("index.html") && localStorage.getItem("compraExitosa")) {
+  document.getElementById("mensajeExito").style.display = "block";
+  localStorage.removeItem("compraExitosa");
+}
 
-const form = document.getElementById("formArticulo");
-const tabla = document.getElementById("tablaArticulos").getElementsByTagName("tbody")[0];
+const formCarrito = document.getElementById("formCarrito");
+const tablaCarrito = document.getElementById("tablaCarrito")?.getElementsByTagName("tbody")[0];
+const continuarBtn = document.getElementById("continuarCompra");
+const formCliente = document.getElementById("formCliente");
+const formFinal = document.getElementById("formFinal");
 
-form.addEventListener("submit", function(e) {
-  e.preventDefault();
+if (formCarrito) {
+  formCarrito.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const producto = document.getElementById("producto").value;
+    const cantidad = parseInt(document.getElementById("cantidad").value);
+    const precio = parseInt(document.getElementById("precio").value);
+    const total = cantidad * precio;
 
-  const nombre = document.getElementById("nombre").value;
-  const categoria = document.getElementById("categoria").value;
-  const precio = document.getElementById("precio").value;
-  const stock = document.getElementById("stock").value;
-  const proveedor = document.getElementById("proveedor").value;
+    const fila = tablaCarrito.insertRow();
+    fila.innerHTML = `<td>${producto}</td><td>${cantidad}</td><td>${total}</td>`;
 
-  const fila = tabla.insertRow();
-  fila.innerHTML = `
-    <td>${contadorID++}</td>
-    <td>${nombre}</td>
-    <td>${categoria}</td>
-    <td>${precio}</td>
-    <td>${stock}</td>
-    <td>${proveedor}</td>
-  `;
+    formCarrito.reset();
+  });
+}
 
-  form.reset();
-});
+// Ojo 2.
+if (continuarBtn) {
+  continuarBtn.addEventListener("click", function() {
+    formCliente.style.display = "block";
+    continuarBtn.style.display = "none";
+  });
+}
+
+if (formFinal) {
+  formFinal.addEventListener("submit", function(e) {
+    e.preventDefault();
+    localStorage.setItem("compraExitosa", "true");
+    window.location.href = "index.html";
+  });
+}
