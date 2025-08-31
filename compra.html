@@ -9,73 +9,73 @@
 </head>
 <body>
 
-  <header>
-    <h1>🛒 Realizar Compra</h1>
-  </header>
+<header>
+  <h1>🛒 Realizar Compra</h1>
+</header>
 
-  <main>
-    <section>
-      <h2>Productos Disponibles</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Producto</th>
-            <th>Precio</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr><td>Caña de Pescar</td><td>25000</td></tr>
-          <tr><td>Carrete Shimano</td><td>40000</td></tr>
-          <tr><td>Señuelo Rapala</td><td>8000</td></tr>
-          <tr><td>Línea Trenzada RUVADAS</td><td>12000</td></tr>
-          <tr><td>Anzuelos Pesca</td><td>5000</td></tr>
-          <tr><td>Caja Organizadora de Señuelos</td><td>8000</td></tr>
-          <!-- repetir código por producto -->
-        </tbody>
-      </table>
-    </section>
+<main>
+  <section>
+    <h2>Selecciona tu producto</h2>
+    <form id="formCarrito">
+      <label for="producto">Producto</label>
+      <select id="producto" required>
+        <option value="">-- Selecciona un producto --</option>
+        <option value="Caña de Pescar">Caña de Pescar</option>
+        <option value="Carrete Shimano">Carrete Shimano</option>
+        <option value="Señuelo Rapala">Señuelo Rapala</option>
+        <option value="Línea Trenzada RUVADAS">Línea Trenzada RUVADAS</option>
+        <option value="Anzuelos Pesca">Anzuelos Pesca</option>
+        <option value="Caja Organizadora de Señuelos">Caja Organizadora de Señuelos</option>
+      </select>
 
-    <section>
-      <h2>Agregar al Carrito</h2>
-      <form id="formCarrito">
-        <input type="text" id="producto" placeholder="Producto" required>
-        <input type="number" id="cantidad" placeholder="Cantidad" required>
-        <input type="text" id="precio" placeholder="Precio unitario" required>
-        <button type="submit">Agregar</button>
-      </form>
+      <label for="cantidad">Cantidad</label>
+      <input type="number" id="cantidad" min="1" placeholder="Cantidad" required>
 
-      <table id="tablaCarrito">
-        <thead>
-          <tr>
-            <th>Producto</th>
-            <th>Cantidad</th>
-            <th>Precio Final</th>
-          </tr>
-        </thead>
-        <tbody>
-          <!-- acá van los datos registrados -->
-        </tbody>
-      </table>
+      <label for="precio">Precio unitario</label>
+      <input type="text" id="precio" placeholder="Precio unitario" readonly>
 
-      <button id="continuarCompra" class="btn">Continuar con la Compra</button>
-      <a href="index.html" class="btn btn-secundario">Volver al inicio</a>
-    </section>
+      <button type="submit">Agregar</button>
+    </form>
+  </section>
 
-    <!-- Ojo 2 -->
-    <section id="formCliente" style="display:none; margin-top:20px;">
-      <h2>Datos del Cliente</h2>
-      <form id="formFinal">
-        <input type="text" id="nombreCliente" placeholder="Nombre" required>
-        <input type="text" id="rutCliente" placeholder="RUT" required>
-        <input type="text" id="contactoCliente" placeholder="Teléfono" required>
-        <input type="text" id="direccionCliente" placeholder="Dirección" required>
-        <button type="submit">Finalizar Compra</button>
-      </form>
-    </section>
-  </main>
+  <section>
+    <h2>Resumen de Compra</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Cantidad</th>
+          <th>Precio Unitario</th>
+          <th>Precio Final</th>
+        </tr>
+      </thead>
+      <tbody id="tablaCompra"></tbody>
+    </table>
+    <button type="button" id="continuar">Continuar con la compra</button>
+  </section>
 
- <footer>
-  <p>&copy; 2025 Mi Tienda Fitness</p>
+  <section id="formCliente" style="display:none;">
+    <h2>Datos del Cliente</h2>
+    <form id="formFinal">
+      <label for="nombreCliente">Nombre:</label>
+      <input type="text" id="nombreCliente" required>
+
+      <label for="rutCliente">RUT:</label>
+      <input type="text" id="rutCliente" required>
+
+      <label for="contactoCliente">Número de Contacto:</label>
+      <input type="text" id="contactoCliente" required>
+
+      <label for="direccionCliente">Dirección:</label>
+      <input type="text" id="direccionCliente" required>
+
+      <button type="submit">Finalizar compra</button>
+    </form>
+  </section>
+</main>
+
+<footer>
+  <p>&copy; 2025 Mundo Pesquero</p>
   <div class="redes">
     <a href="https://wa.me/56912345678" target="_blank">
       <img src="img/icons/wsp.avif" alt="WhatsApp">
@@ -86,6 +86,6 @@
   </div>
 </footer>
 
-  <script src="js/script.js"></script>
+<script src="js/script.js"></script>
 </body>
 </html>
