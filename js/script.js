@@ -22,6 +22,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
+  const inputContacto = document.getElementById("contactoCliente");
+if (inputContacto) {
+  inputContacto.addEventListener("input", function () {
+    this.value = this.value.replace(/[^0-9+ ]/g, ""); 
+  });
+}
+
   // Precios
   const PRECIOS = {
     "Caña de Pescar": 25000,
