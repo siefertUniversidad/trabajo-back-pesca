@@ -1,0 +1,34 @@
+header {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+.header-contenido {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0 20px;
+}
+.logo {
+  width: 60px;
+  height: auto;
+}
+.logo-titulo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.titulo-pagina {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+}
+
+footer {
+  background: #003366;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
